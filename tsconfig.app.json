@@ -23,8 +23,13 @@
     /* Path */
     "baseUrl": "./src",
     "paths": {
-      "@ui/*": ["ui/*"],
-      "@features/*": ["features/*"],
+      "@common/*": ["common/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages/*": ["pages/*"],
+      "@router/*": ["router/*"],
+      "@sections/*": ["sections/*"],
+      "@services/*": ["services/*"],
     }
   },
   "include": ["src"]

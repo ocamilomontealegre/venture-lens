@@ -6,10 +6,18 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   resolve: {
     alias: {
-      "@app": resolve(__dirname, "src/app"),
-      "@ui": resolve(__dirname, "src/ui"),
-      "@features": resolve(__dirname, "src/features"),
+      "@common": resolve(__dirname, "src/common"),
+      "@components": resolve(__dirname, "src/components"),
+      "@layouts": resolve(__dirname, "src/layouts"),
+      "@pages": resolve(__dirname, "src/pages"),
+      "@router": resolve(__dirname, "src/router"),
+      "@sections": resolve(__dirname, "src/sections"),
+      "@services": resolve(__dirname, "src/services"),
     },
   },
   plugins: [react()],
+  server: {
+    cors: true,
+    port: 3000,
+  },
 });
