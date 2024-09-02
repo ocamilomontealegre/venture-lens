@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 export const Login = (): ReactNode => {
   const styles = {
-    backgroundImage: "url(/public/landscape.png)",
+    backgroundImage: "url(/landscape.png)",
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
