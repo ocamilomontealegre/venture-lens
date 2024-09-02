@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Proyecto de Captura y Galería de Imágenes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto permite a los usuarios tomar fotos y visualizarlas en una galería. Utiliza Firebase para la autenticación y almacenamiento de imágenes.
 
-Currently, two official plugins are available:
+## Tecnologías Usadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca para construir la interfaz de usuario.
+- **Firebase**: Para autenticación y almacenamiento de imágenes.
+- **Tailwind CSS**: Para el diseño y estilo de la interfaz de usuario.
+- **React Router**: Para la navegación entre las diferentes páginas de la aplicación.
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clona el repositorio**:
 
-- Configure the top-level `parserOptions` property like this:
+    ```bash
+    git clone https://github.com/ocamilomontealegre/venture-lens.git
+    cd tu-repositorio
+    ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Instala las dependencias**:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    ```bash
+    pnpm install
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Configura Firebase**:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    - Crea un proyecto en [Firebase Console](https://console.firebase.google.com/).
+    - Configura la autenticación y el almacenamiento en Firebase.
+    ```
+
+4. **Inicia el servidor de desarrollo**:
+
+    ```bash
+    pnpm run dev
+    ```
+
+## Uso
+
+1. **Autenticación**:
+    - Los usuarios pueden iniciar sesión con su correo electrónico o mediante Google.
+
+2. **Captura de Imágenes**:
+    - Los usuarios pueden tomar fotos y subirlas a Firebase Storage.
+
+3. **Galería**:
+    - Las imágenes subidas se muestran en una galería.
+
+## Estructura del Proyecto
+
+- `src/`
+- `common/`: Componentes y utilidades compartidos en toda la aplicación.
+- `components/`: Componentes reutilizables de React.
+- `layouts/`: Diseño y estructura de las diferentes páginas.
+- `pages/`: Componentes de página para diferentes vistas.
+- `router/`: Configuración de rutas y navegación.
+- `sections/`: Secciones específicas de la interfaz, como encabezados y pies de página.
+- `services/`: Servicios para interactuar con Firebase y otros recursos externos.
+- `App.tsx`: Componente principal de la aplicación.
+- `index.tsx`: Punto de entrada de la aplicación.
+
+Para cualquier pregunta o comentario, por favor contacta a [ocamilomontealegre@gmail.com](mailto:ocamilomontealegre@gmail.com).
