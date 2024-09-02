@@ -5,7 +5,7 @@ export const Footer = ({ ...props }: Readonly<IFooterProps>): ReactNode => {
   return (
     <footer {...props}>
       <p className="text-sm lg:text-lg text-center">
-        Made with Love by<a href="https://github.com/ocamilomontealegre">@ocamilomontealegre</a>
+        Made with Love by <a href="https://github.com/ocamilomontealegre">@ocamilomontealegre</a>
       </p>
     </footer>
   );
